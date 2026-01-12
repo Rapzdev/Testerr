@@ -1,0 +1,92 @@
+@font-face {
+  font-family: "Howdybun";
+  src: url("Font/Howdybun.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #1fa463, #0b6fa4);
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Brand */
+.brand-title {
+  position: fixed;
+  top: 18px;
+  left: 18px;
+  font-family: "Howdybun", cursive;
+  font-size: 1.8rem;
+  letter-spacing: 1px; /* dirapatkan */
+}
+
+.upion {
+  color: #e53935;
+  margin-right: 2px; /* jarak lebih rapat */
+}
+
+.tlab {
+  color: #64b5f6; /* biru muda terang non-neon */
+}
+
+/* Center */
+.loading-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Dots */
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.dots span {
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 50%;
+  animation: wave 1.4s infinite ease-in-out;
+}
+
+.dots span:nth-child(1){ animation-delay: 0s; }
+.dots span:nth-child(2){ animation-delay: .2s; }
+.dots span:nth-child(3){ animation-delay: .4s; }
+
+@keyframes wave {
+  0%,80%,100% {
+    transform: translateY(0);
+    opacity: .4;
+  }
+  40% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+}
+
+/* Text */
+.desc {
+  margin-top: 12px;
+  font-size: .95rem;
+  opacity: .9;
+}
+
+/* DateTime */
+.datetime {
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+  font-size: .8rem;
+  opacity: .85;
+}
